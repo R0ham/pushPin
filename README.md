@@ -1,9 +1,12 @@
 # pushPin
-A poster sharing application for modern campuses
+A virtual environment for poster sharing built for modern campuses.
 
 ---
 
 # Team Members
- - Add your names here
+ - Add your names/roles here pls
+ - Roham Hussain — Design/Front-end
  - Kate Vandermolen - API/Front-end interop
- - Or here I'm not picky
+ - Harry Tan - 
+ - Ryan Berlin - 
+ - Victor Zhu - 
