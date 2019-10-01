@@ -7,6 +7,7 @@ if (mysqli_connect_errno()) {
     echo(json_encode(array('error' => 'unable to connect to database')));
     exit();
 }
+header("Content-Type: text/json");
 $result = mysqli_query($con, "SELECT * FROM posters");
 $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
 echo(json_encode($rows));
