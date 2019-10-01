@@ -1,0 +1,10 @@
+# This file controls the httpd configuration for pushPin.
+# It should be copied to httpd.conf or vhost in production to improve performance.
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule (.*) $1.php [L]
+<Files env.php>
+Deny from all
+</Files>
