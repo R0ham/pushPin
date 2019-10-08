@@ -8,5 +8,5 @@ A virtual environment for poster sharing built for modern campuses.
  - Roham Hussain - Design/Front-end
  - Kate Vandermolen - API/Front-end interop
  - Harry Tan - 
- - Ryan Berlin - Front-end
+ - Ryan Berlin - Login
  - Victor Zhu - Backend / API design
