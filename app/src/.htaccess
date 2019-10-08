@@ -1,0 +1,14 @@
+# This file controls the httpd configuration for pushPin.
+# It should be copied to httpd.conf or vhost in production to improve performance.
+Options +FollowSymLinks
+
+# redirect all api calls to /api/api.php
+RewriteRule ^api/((?!index\.php$).+)$ api/api.php [L,NC]
+
+# If the request is a file, folder or symlink that exists, serve it up
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# otherwise, serve your index.html app
+RewriteRule ^(.+)$ index.html [L]
