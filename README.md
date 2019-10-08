@@ -7,6 +7,6 @@ A virtual environment for poster sharing built for modern campuses.
  - Add your names/roles here pls
  - Roham Hussain - Overall Design / Front-end
  - Harry Tan - Front-end
+ - Ryan Berlin - Login / Authentication Front-end
  - Kate Vandermolen - API / Front-end interop
- - Ryan Berlin - Login / Authentication
  - Victor Zhu - Backend / API design
