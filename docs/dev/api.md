@@ -24,4 +24,9 @@ Posts a new poster to pushPin
 
 ---
 
+```
+GET /api/image/:hash
+```
+Returns the image associated with a hash. Useful for embedding.
+
 More tbd

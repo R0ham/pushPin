@@ -6,5 +6,5 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule (.*) $1.php [L]
 <Files env.php>
-Deny from all
+    Deny from all
 </Files>
