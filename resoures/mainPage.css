@@ -1,7 +1,20 @@
+.logo{
+    width:40;
+    height:40;
+}
+
+#header{
+    align-items:left;
+}
+
+#userName{
+    display: inline;
+}
+
 div.posterGallery {
     border: 1px solid #ccc;
   }
-  
+
 div.posterGallery:hover {
     border: 1px solid #777;
 }
@@ -25,7 +38,7 @@ div.desc {
     float: left;
     width: 24.99999%;
 }
-  
+
 @media only screen and (max-width: 700px) {
     .responsive {
       width: 49.99999%;
@@ -38,7 +51,24 @@ div.desc {
       width: 100%;
     }
 }
-  
+
+
+.filter{
+    border-bottom: 6px solid red;
+    background-color: lightgrey;
+}
+
+.filter div{
+    border-left: 6px solid red;
+    background-color: lightgrey;
+}
+
+.filter div:hover{
+    border-left: 6px solid blue;
+    background-color: lightgrey;
+    color: brown;
+}
+
 .clearfix:after {
     content: "";
     display: table;
