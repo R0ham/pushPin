@@ -1,17 +1,18 @@
 body{
     background-color: rgb(230, 230, 230);
     margin: 0px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Bariol Regular', sans-serif;
 }
 
 header {
-    margin: 20px 30px;
+    margin: 20px 30px 100px 30px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
 }
 
 #logo {
@@ -40,4 +41,57 @@ nav {
 
 #style-modes i:hover {
     cursor: pointer;
+}
+
+form {
+    width: 50%;
+    min-width: 250px;
+    margin: auto;
+}
+form input {
+    width: 100%;
+    border: 1px solid rgb(220, 56, 50);
+    height: 35px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 5px;
+    font-size: 1.2em;
+}
+label {
+    display: block;
+    width: 40%;
+    min-width: 250px;
+    margin: auto;
+}
+
+#submit {
+    display: block;
+    width: 25%;
+    max-width: 150px;
+    min-width: 100px;
+    height: 50px;
+    border: none;
+    background-color: rgb(220, 56, 50);
+    color: white;
+    font-size: 2em;
+    font-weight: 100;
+    font-family: 'Bariol Regular', sans-serif;
+}
+#submit:hover {
+    cursor: pointer;
+    background-color: rgb(173, 46, 42);
+    
+}
+
+#signup {
+    text-align: center;
+}
+#signup a {
+    color: black;
+}
+#signup a:visited {
+    color: black;
+}
+#signup a:hover {
+    color: rgb(220, 56, 50);
 }
