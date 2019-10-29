@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(230, 230, 230);
+    margin: 0px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header {
+    margin: 20px 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#logo {
+    margin: 0px;
+}
+#logo a{
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 100;
+}
+#logo a:visited {
+    color: black;
+}
+
+#navlink {
+    color: rgb(220, 56, 50);
+    font-size: 1.5em;
+    text-decoration: none;
+}
+#navlink:visited {
+    color: rgb(220, 56, 50);
+}
+#navlink:hover {
+    color: rgb(173, 46, 42);
+}
+
+#style-modes i:hover {
+    cursor: pointer;
+}
