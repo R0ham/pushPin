@@ -69,59 +69,26 @@ nav {
     cursor: pointer;
 }
 
-form {
-    width: 50%;
-    min-width: 250px;
-    margin: auto;
-}
-form input {
-    width: 100%;
-    border: 1px solid rgb(220, 56, 50);
-    height: 35px;
-    margin: auto;
-    margin-bottom: 50px;
-    margin-top: 5px;
-    font-size: 1.2em;
-}
-label {
-    display: block;
-    width: 40%;
-    min-width: 250px;
-    margin: auto;
-    color: var(--text-color);
-}
-
-#submit {
-    display: block;
-    width: 25%;
-    max-width: 150px;
-    min-width: 100px;
-    height: 50px;
-    border: none;
-    background-color: rgb(220, 56, 50);
-    color: white;
-    font-size: 2em;
-    font-weight: 100;
-    font-family: 'Bariol Regular', sans-serif;
-}
-#submit:hover {
-    cursor: pointer;
-    background-color: rgb(173, 46, 42);   
-}
-
-#signup {
-    text-align: center;
-}
-#signup{
-    color: var(--text-color);
-}
-#signup a:visited {
-    color: var(--text-color);
-}
-#signup a:hover {
-    color: rgb(220, 56, 50);
-}
-
-#submit, #active {
+#active {
     transition: none;
+}
+
+.flex-container {
+  display: flex;
+  /*height: 600px;*/
+  justify-content: center;
+  flex-wrap: wrap;
+  /*align-content: space-between;*/
+  /*background-color: DodgerBlue;*/
+}
+
+.flex-container > div {
+  /*background-color: #f1f1f1;*/
+  background-color: rgb(220, 56, 50);
+  width: 5.5in;
+  height: 4.25in;
+  margin: 10px;
+  text-align: center;
+  line-height: 300px;
+  font-size: 30px;
 }
