@@ -42,15 +42,23 @@ nav {
     color: var(--text-color);
 }
 
-#navlink {
+.navlink {
+    color: var(--text-color);
+    font-size: 1.5em;
+    text-decoration: none;
+}
+.navlink:hover {
+    color: rgb(220, 56, 50);
+}
+#active {
     color: rgb(220, 56, 50);
     font-size: 1.5em;
     text-decoration: none;
 }
-#navlink:visited {
+#active:visited {
     color: rgb(220, 56, 50);
 }
-#navlink:hover {
+#active:hover {
     color: rgb(173, 46, 42);
 }
 
@@ -98,8 +106,7 @@ label {
 }
 #submit:hover {
     cursor: pointer;
-    background-color: rgb(173, 46, 42);
-    
+    background-color: rgb(173, 46, 42);   
 }
 
 #signup {
