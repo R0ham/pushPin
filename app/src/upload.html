@@ -25,12 +25,13 @@
             <img id = "posterImg">
         </div>
 
-        <div id = "upLoadInfo">
+        <div id = "uploadInfo">
             <div id = "uploadTag"> <p>image upload</p> </div>
             <form action="api/upload.php" method="POST">
-            <label for="posterName">tags<input id="posterName" type="text" name="posterName"/></label>
-            <label for="describition">describition<input id="describition" type="text" name="describition"/> </label>
-            <label for="tags">tags<input id="tags" type="text" name="tags"/></label>
+            <label for="posterName"><input id="posterName" type="text" name="posterName" value="The name of your event"/></label>
+            <label for="describition">
+            <textarea id="describition" name="describition" value="Tell us more about your poster event!"></textarea> </label>
+            <label for="tags"><input id="tags" type="text" name="tags" value="What tags would you like to give to your event"/></label>
             <input id="submit" type="submit" value="upload"/>
         </form>
         </div>
