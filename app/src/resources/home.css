@@ -1,0 +1,94 @@
+:root {
+    --background-color:rgb(230, 230, 230);
+    --text-color: black;
+}
+[data-theme="dark"] {
+    --background-color: rgb(51, 51, 51);
+    --text-color: rgb(204, 204, 204);
+}
+
+* {
+    transition: color .5s linear;
+    transition: background-color .5s linear;
+}
+
+body{
+    background-color: var(--background-color);
+    margin: 0px;
+    font-family: 'Bariol Regular', sans-serif;
+}
+
+header {
+    margin: 20px 30px 100px 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#logo {
+    margin: 0px;
+}
+#logo a{
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 100;
+    color: var(--text-color);
+}
+#logo a:visited {
+    color: var(--text-color);
+}
+
+.navlink {
+    color: var(--text-color);
+    font-size: 1.5em;
+    text-decoration: none;
+}
+.navlink:hover {
+    color: rgb(220, 56, 50);
+}
+#active {
+    color: rgb(220, 56, 50);
+    font-size: 1.5em;
+    text-decoration: none;
+}
+#active:visited {
+    color: rgb(220, 56, 50);
+}
+#active:hover {
+    color: rgb(173, 46, 42);
+}
+
+#style-modes i {
+    color: var(--text-color);
+}
+#style-modes i:hover {
+    cursor: pointer;
+}
+
+#active {
+    transition: none;
+}
+
+.flex-container {
+  display: flex;
+  /*height: 600px;*/
+  justify-content: center;
+  flex-wrap: wrap;
+  /*align-content: space-between;*/
+  /*background-color: DodgerBlue;*/
+}
+
+.flex-container > div {
+  /*background-color: #f1f1f1;*/
+  background-color: rgb(220, 56, 50);
+  width: 5.5in;
+  height: 4.25in;
+  margin: 10px;
+  text-align: center;
+  line-height: 300px;
+  font-size: 30px;
+}
