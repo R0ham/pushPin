@@ -122,6 +122,6 @@ label {
     color: rgb(220, 56, 50);
 }
 
-#submit, #navlink {
+#submit, #active {
     transition: none;
 }
