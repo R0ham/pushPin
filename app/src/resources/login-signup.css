@@ -1,10 +1,14 @@
 :root {
     --background-color:rgb(230, 230, 230);
     --text-color: black;
+    --primary-color: rgb(220, 56, 50);
+    --primary-hover: rgb(173, 46, 42);
 }
 [data-theme="dark"] {
     --background-color: rgb(51, 51, 51);
     --text-color: rgb(204, 204, 204);
+    --primary-color: rgb(235, 151, 62);
+    --primary-hover: rgb(172, 111, 45);
 }
 
 * {
@@ -47,19 +51,17 @@ nav {
     font-size: 1.5em;
     text-decoration: none;
 }
+.navlink:visited {
+    color: var(--text-color);
+}
 .navlink:hover {
-    color: rgb(220, 56, 50);
+    color: var(--primary-color);
 }
-#active {
-    color: rgb(220, 56, 50);
-    font-size: 1.5em;
-    text-decoration: none;
+.active {
+    color: var(--primary-color);
 }
-#active:visited {
-    color: rgb(220, 56, 50);
-}
-#active:hover {
-    color: rgb(173, 46, 42);
+.active:visited {
+    color: var(--primary-color);
 }
 
 #style-modes i {
@@ -76,7 +78,7 @@ form {
 }
 form input {
     width: 100%;
-    border: 1px solid rgb(220, 56, 50);
+    border: 2px solid var(--primary-color);
     height: 35px;
     margin: auto;
     margin-bottom: 50px;
@@ -98,7 +100,7 @@ label {
     min-width: 100px;
     height: 50px;
     border: none;
-    background-color: rgb(220, 56, 50);
+    background-color: var(--primary-color);
     color: white;
     font-size: 2em;
     font-weight: 100;
@@ -106,7 +108,7 @@ label {
 }
 #submit:hover {
     cursor: pointer;
-    background-color: rgb(173, 46, 42);   
+    background-color: var(--primary-hover);   
 }
 
 #signup {
@@ -119,7 +121,7 @@ label {
     color: var(--text-color);
 }
 #signup a:hover {
-    color: rgb(220, 56, 50);
+    color: var(--primary-color);
 }
 
 #submit, #active {
