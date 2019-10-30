@@ -1,0 +1,108 @@
+:root {
+    --background-color:rgb(230, 230, 230);
+    --text-color: black;
+}
+[data-theme="dark"] {
+    --background-color: rgb(51, 51, 51);
+    --text-color: rgb(204, 204, 204);
+}
+
+* {
+    transition: color .5s linear;
+    transition: background-color .5s linear;
+}
+
+body{
+    background-color: var(--background-color);
+    margin: 0px;
+    font-family: 'Bariol Regular', sans-serif;
+}
+
+header {
+    margin: 20px 30px 10px 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#logo {
+    margin: 0px;
+}
+#logo a{
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 100;
+    color: var(--text-color);
+}
+#logo a:visited {
+    color: var(--text-color);
+}
+
+#style-modes i {
+    color: var(--text-color);
+}
+#style-modes i:hover {
+    cursor: pointer;
+}
+
+/* copied from Ryan */
+
+#poster{
+    width: 30%;
+    min-width:  200px;
+    height: 100%;
+    min-height: 600px;
+    background-color: rgb(220, 56, 50);
+    margin: 20px 30px 10px 30px;
+    float: left;
+}
+
+form {
+    width: 60%;
+    min-width: 250px;
+    margin: auto;
+}
+form input {
+    width: 60%;
+    border: 1px solid rgb(220, 56, 50);
+    height: 400px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 5px;
+    font-size: 1.2em;
+}
+label {
+    display: block;
+    width: 60%;
+    min-width: 250px;
+    margin: auto;
+    color: var(--text-color);
+}
+
+#submit {
+    display: block;
+    width: 25%;
+    max-width: 150px;
+    min-width: 100px;
+    height: 50px;
+    border: none;
+    background-color: rgb(220, 56, 50);
+    color: white;
+    font-size: 2em;
+    font-weight: 100;
+    font-family: 'Bariol Regular', sans-serif;
+}
+#submit:hover {
+    cursor: pointer;
+    background-color: rgb(173, 46, 42);
+    
+}
+
+#submit, #navlink {
+    transition: none;
+}
+
