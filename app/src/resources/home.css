@@ -1,10 +1,14 @@
 :root {
     --background-color:rgb(230, 230, 230);
     --text-color: black;
+    --primary-color: rgb(220, 56, 50);
+    --primary-hover: rgb(173, 46, 42);
 }
 [data-theme="dark"] {
     --background-color: rgb(51, 51, 51);
     --text-color: rgb(204, 204, 204);
+    --primary-color: rgb(235, 151, 62);
+    --primary-hover: rgb(172, 111, 45);
 }
 
 * {
@@ -19,7 +23,7 @@ body{
 }
 
 header {
-    margin: 20px 30px 100px 30px;
+    margin: 20px 30px 50px 30px;
 }
 
 nav {
@@ -48,18 +52,7 @@ nav {
     text-decoration: none;
 }
 .navlink:hover {
-    color: rgb(220, 56, 50);
-}
-#active {
-    color: rgb(220, 56, 50);
-    font-size: 1.5em;
-    text-decoration: none;
-}
-#active:visited {
-    color: rgb(220, 56, 50);
-}
-#active:hover {
-    color: rgb(173, 46, 42);
+    color: var(--primary-color);
 }
 
 #style-modes i {
@@ -69,26 +62,15 @@ nav {
     cursor: pointer;
 }
 
-#active {
-    transition: none;
-}
-
 .flex-container {
   display: flex;
-  /*height: 600px;*/
   justify-content: center;
   flex-wrap: wrap;
-  /*align-content: space-between;*/
-  /*background-color: DodgerBlue;*/
 }
 
-.flex-container > div {
-  /*background-color: #f1f1f1;*/
-  background-color: rgb(220, 56, 50);
-  width: 5.5in;
-  height: 4.25in;
-  margin: 10px;
-  text-align: center;
-  line-height: 300px;
-  font-size: 30px;
+.poster {
+  background-color: rgb(135, 139, 187);
+  height: 525px;
+  width: 406px;
+  margin: 25px;
 }
