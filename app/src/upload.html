@@ -13,7 +13,7 @@
         <header>
             <nav>
                 <h1 id='logo'><a href="index.html">pushPin</a></h1>
-                <a href="login.html" id='navlink'>login</a>
+                <a href="login.html" class='navlink'>login</a>
             </nav>
             <div id="style-modes">
                 <i id="lightmode" class="fas fa-sun"> |</i>
@@ -21,19 +21,25 @@
             </div>
         </header>
 
-        <div id = "poster">
-            <img id = "posterImg">
-        </div>
-
         <div id = "uploadInfo">
-            <div id = "uploadTag"> <p>image upload</p> </div>
+            <div id = "poster">
+                <img id = "posterImg">
+            </div>
+
             <form action="api/upload.php" method="POST">
-            <label for="posterName"><input id="posterName" type="text" name="posterName" value="The name of your event"/></label>
-            <label for="describition">
-            <textarea id="describition" name="describition" value="Tell us more about your poster event!"></textarea> </label>
-            <label for="tags"><input id="tags" type="text" name="tags" value="What tags would you like to give to your event"/></label>
-            <input id="submit" type="submit" value="upload"/>
-        </form>
+                <button id="image-upload">upload image</button>
+                <input id="posterName" type="text" name="posterName" placeholder="poster title"/>
+                <textarea id="description" name="description" placeholder="event description..."></textarea>  
+                <label for="event-date">
+                    event date
+                    <input id="event-date" type="date" name="event-date"/>
+                </label>
+                <label for="takedown-date">
+                        takedown date
+                        <input id="takedown-date" type="date" name="takedown-date"/>
+                    </label>
+                <input id="submit" type="submit" value="upload"/>
+            </form>
         </div>
 
 
