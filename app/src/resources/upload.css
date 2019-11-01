@@ -50,9 +50,20 @@ nav {
     color: var(--text-color);
     font-size: 1.5em;
     text-decoration: none;
+    margin-left: 10px;
 }
-.navlink:hover {
+.navlink:visited {
+    color: var(--text-color);
+}
+.navlink:hover, .active, .active:visited {
     color: var(--primary-color);
+}
+
+#logout {
+    display: block;
+    text-align: right;
+    text-decoration: underline;
+    font-size: .75em;
 }
 
 #style-modes i {
