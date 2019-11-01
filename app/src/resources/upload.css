@@ -1,10 +1,14 @@
 :root {
     --background-color:rgb(230, 230, 230);
     --text-color: black;
+    --primary-color: rgb(220, 56, 50);
+    --primary-hover: rgb(173, 46, 42);
 }
 [data-theme="dark"] {
     --background-color: rgb(51, 51, 51);
     --text-color: rgb(204, 204, 204);
+    --primary-color: rgb(235, 151, 62);
+    --primary-hover: rgb(172, 111, 45);
 }
 
 * {
@@ -19,7 +23,7 @@ body{
 }
 
 header {
-    margin: 20px 30px 10px 30px;
+    margin: 20px 30px 50px 30px;
 }
 
 nav {
@@ -42,6 +46,26 @@ nav {
     color: var(--text-color);
 }
 
+.navlink {
+    color: var(--text-color);
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.navlink:visited {
+    color: var(--text-color);
+}
+.navlink:hover, .active, .active:visited {
+    color: var(--primary-color);
+}
+
+#logout {
+    display: block;
+    text-align: right;
+    text-decoration: underline;
+    font-size: .75em;
+}
+
 #style-modes i {
     color: var(--text-color);
 }
@@ -51,82 +75,72 @@ nav {
 
 /* copied from Ryan */
 
-#poster{
-    width: 35%;
-    min-width:  250px;
-    height: 100%;
-    min-height: 600px;
-    background-color: orange;
-    margin: 10px 30px 10px 30px;
-    float: left;
-
-}
-
 #uploadInfo{
-    float:left;
-    width: 55%;
-    min-width:  250px;
-    height: 100%;
-    min-height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
-#uploadTag{
-    background-color: orange;
-    width: 30%;
-    color: white;
-    font-size: 2em;
+#poster{
+    width: 550px;
+    min-width: 550px;
+    height: 712px;;
+    background-color: rgb(135, 139, 187);
 }
 
 form {
-    width: 100%;
+    width: 750px;
     min-width: 250px;
-    margin: auto;
-}
-form input, textarea {
-    width: 100%;
-    border: 4px solid orange;
-    margin: auto;
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    background-color: var(--background-color);
-    color: var(--text-color);
 }
 
-p {
+input, textarea {
+    font-size: 1.1em;
+    border: 2px solid var(--primary-color);
+    margin-bottom: 25px;
+}
+input {
     display: block;
     width: 100%;
-    min-width: 250px;
-    margin: auto;
-    color: var(--text-color);
+    height: 35px;
+}
+textarea {
+    width: 100%;
+    height: 100px;
 }
 label {
     display: block;
-    width: 100%;
+    width: 40%;
     min-width: 250px;
-    margin: auto;
     color: var(--text-color);
 }
-#posterName{
-    height: 100px;
+
+#image-upload{
+    background-color: var(--primary-color);
+    width: 30%;
+    color: white;
+    font-size: 1.2em;
+    width: 25%;
+    height: 35px;
+    max-width: 150px;
+    min-width: 100px;
+    border: none;
+    margin-bottom: 25px;
+}
+#image-upload:hover {
+    cursor: pointer;
+    background-color: var(--primary-hover);
 }
 
-
-#describition{
-    height: 200px;
-}
-
-#tags{
-    height: 100px;
-}
 
 #submit {
     display: block;
     width: 25%;
     max-width: 150px;
     min-width: 100px;
+    margin: auto;
     height: 50px;
     border: none;
-    background-color: orange;
+    background-color: var(--primary-color);
     color: white;
     font-size: 2em;
     font-weight: 100;
@@ -134,11 +148,10 @@ label {
 }
 #submit:hover {
     cursor: pointer;
-    background-color: orange;
-    
+    background-color: var(--primary-hover);   
 }
 
-#submit, #navlink {
+button, #submit, .navlink {
     transition: none;
 }
 
