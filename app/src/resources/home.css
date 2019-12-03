@@ -30,10 +30,11 @@ nav {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    height: 2em;
     font-size: 1.2em;
 }
 
-#logo {
+/*#logo {
     margin: 0px;
 }
 #logo a{
@@ -44,6 +45,16 @@ nav {
 }
 #logo a:visited {
     color: var(--text-color);
+}*/
+
+#logo {
+    margin: 0;
+}
+
+#logo img {
+    display: block;
+    height: 100%;
+    margin-left: 2px;
 }
 
 .navlink {
@@ -55,7 +66,7 @@ nav {
     color: var(--primary-color);
 }
 
-#style-modes i {
+#style-modes {
     color: var(--text-color);
 }
 #style-modes i:hover {

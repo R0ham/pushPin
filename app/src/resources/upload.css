@@ -25,20 +25,18 @@ nav {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    height: 2em;
     font-size: 1.2em;
 }
 
 #logo {
-    margin: 0px;
+    margin: 0;
 }
-#logo a{
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: 100;
-    color: var(--text-color);
-}
-#logo a:visited {
-    color: var(--text-color);
+
+#logo img {
+    display: block;
+    height: 100%;
+    margin-left: 2px;
 }
 
 .navlink {
@@ -61,7 +59,7 @@ nav {
     font-size: .75em;
 }
 
-#style-modes i {
+#style-modes {
     color: var(--text-color);
 }
 #style-modes i:hover {

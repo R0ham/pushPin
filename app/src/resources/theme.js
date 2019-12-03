@@ -10,16 +10,18 @@ function toggleTheme(e, theme) {
         document.documentElement.setAttribute('data-theme', 'light');
         $('#lightmode').removeClass('far').addClass('fas');
         $('#darkmode').removeClass('fas').addClass('far');
-        $('*').css("transition", "color .25s linear");
-        $('*').css("transition", "background-color .25s linear");
+        $('*').css('transition', 'color .25s linear');
+        $('*').css('transition', 'background-color .25s linear');
+        $("#logo img").attr("src","resources/pushPin_logo_black.png");
         window.localStorage.setItem('theme', 'lightmode');
     }
     if(theme === 'darkmode') {
         document.documentElement.setAttribute('data-theme', 'dark');
         $('#lightmode').removeClass('fas').addClass('far');
         $('#darkmode').removeClass('far').addClass('fas');
-        // $('*').css("transition", "color .25s linear");
-        // $('*').css("transition", "background-color .25s linear");
+        // $('*').css('transition', 'color .25s linear');
+        // $('*').css('transition', 'background-color .25s linear');
+        $("#logo img").attr("src","resources/pushPin_logo_white.png");
         window.localStorage.setItem('theme', 'darkmode');
     }
 }
