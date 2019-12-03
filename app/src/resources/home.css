@@ -11,10 +11,10 @@
     --primary-hover: rgb(172, 111, 45);
 }
 
-* {
-    transition: color .5s linear;
-    transition: background-color .5s linear;
-}
+/** {
+    transition: color .25s linear;
+    transition: background-color .25s linear;
+}*/
 
 body{
     background-color: var(--background-color);
