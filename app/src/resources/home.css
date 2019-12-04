@@ -1,5 +1,6 @@
 :root {
     --background-color:rgb(240, 240, 240);
+    --background-hover:rgba(240, 240, 240, 0.5);
     --text-color: black;
     /*ORIGINAL*/
     /*--primary-color: rgb(220, 56, 50);*/
@@ -10,6 +11,7 @@
 }
 [data-theme="dark"] {
     --background-color: rgb(51, 51, 51);
+    --background-hover: rgba(51, 51, 51, 0.5);
     --text-color: rgb(204, 204, 204);
     /*ORIGINAL*/
     /*--primary-color: rgb(235, 151, 62);*/
@@ -98,10 +100,8 @@ nav {
     height: 100%;
     text-align: center;
     line-height: 525px;
-    color: black;
-    /*color: white;*/
-    background-color: rgba(255, 255, 255, .5);
-    /*background-color: var(--primary-hover);*/
+    color: var(--text-color);
+    background-color: var(--background-hover);
     visibility: hidden;
     opacity: 0%;
     transition: visibility .2s linear;
@@ -114,44 +114,22 @@ nav {
 .poster-details {
     display: none;
     position: fixed;
-/*    width: 84%;
-    height: 84%;
-    top: 10%;
-    left: 8%;*/
-
-/*    height: 84%;
-    top: 12%;
-    left: 5%;
-    right: 5%;*/
-
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
     margin: auto;
-    /*background-color: rgba(0, 0, 0, .75);*/
-    /*background-color: rgba(91, 91, 91);*/
     background-color: var(--background-color);
-    /*box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);*/
-    /*color: rgb(204, 204, 204);*/
     color: var(--text-color);
 }
 .close {
     position: absolute;
     top: 0;
     left: 0;
-   
-    /*display: block;*/
-    /*height: 30px;*/
-/*    margin-top: auto;
-    margin-bottom: auto;
-*/    
     background-color: var(--primary-color);
     padding: 15px;
     color: white;
     margin: 0;
-
 }
 .close:hover {
     cursor: pointer;
@@ -159,10 +137,6 @@ nav {
 }
 .template {
     height: 90%;
-/*    position: absolute;
-    top: 45px;
-    left: 45px;*/
-    /*margin-top: 25px;*/
     margin-left: 5%;
     background-color: rgb(135, 139, 187);
     align-self: center;
