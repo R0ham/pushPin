@@ -9,7 +9,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 $account = new Account();
-
+header("Content-Type: text/json");
 try {
     if ($account->login($username, $password)) {
         echo "{\"success\": \"true\", \"username\": $username}";
