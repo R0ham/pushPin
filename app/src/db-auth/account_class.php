@@ -224,11 +224,11 @@ class Account{
         $name = trim($name);
         $passwd = trim($passwd);
 
-        if (!this->isNameValid($name)){
+        if (!$this->isNameValid($name)){
             return FALSE;
         }
 
-        if (!this->isPasswordValid($passwd)){
+        if (!$this->isPasswordValid($passwd)){
             return FALSE;
         }
 
@@ -238,7 +238,7 @@ class Account{
 
         try{
             $res = $pdo->prepare($query);
-            res->execute($values);
+            $res->execute($values);
         }
         catch (PDOException $e){
             throw new Exception('login: DB query error');
