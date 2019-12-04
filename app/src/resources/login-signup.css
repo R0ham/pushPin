@@ -1,19 +1,14 @@
 :root {
-    --background-color:rgb(230, 230, 230);
+    --background-color:rgb(240, 240, 240);
     --text-color: black;
-    --primary-color: rgb(220, 56, 50);
-    --primary-hover: rgb(173, 46, 42);
+    --primary-color: rgb(230, 57, 70);
+    --primary-hover: rgb(200, 38, 57);
 }
 [data-theme="dark"] {
     --background-color: rgb(51, 51, 51);
     --text-color: rgb(204, 204, 204);
-    --primary-color: rgb(235, 151, 62);
-    --primary-hover: rgb(172, 111, 45);
-}
-
-* {
-    transition: color .5s linear;
-    transition: background-color .5s linear;
+    --primary-color: rgb(255, 133, 58);
+    --primary-hover: rgb(222, 107, 72);
 }
 
 body{
@@ -30,20 +25,18 @@ nav {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    height: 2em;
     font-size: 1.2em;
 }
 
 #logo {
-    margin: 0px;
+    margin: 0;
 }
-#logo a{
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: 100;
-    color: var(--text-color);
-}
-#logo a:visited {
-    color: var(--text-color);
+
+#logo img {
+    display: block;
+    height: 100%;
+    margin-left: 2px;
 }
 
 .navlink {
@@ -64,7 +57,7 @@ nav {
     color: var(--primary-color);
 }
 
-#style-modes i {
+#style-modes {
     color: var(--text-color);
 }
 #style-modes i:hover {

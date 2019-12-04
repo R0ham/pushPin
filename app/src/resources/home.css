@@ -1,20 +1,27 @@
 :root {
-    --background-color:rgb(230, 230, 230);
+    --background-color:rgb(240, 240, 240);
     --text-color: black;
-    --primary-color: rgb(220, 56, 50);
-    --primary-hover: rgb(173, 46, 42);
+    /*ORIGINAL*/
+    /*--primary-color: rgb(220, 56, 50);*/
+    /*--primary-hover: rgb(173, 46, 42);*/
+    --primary-color: rgb(230, 57, 70);
+    --primary-hover: rgb(200, 38, 57);
+
 }
 [data-theme="dark"] {
     --background-color: rgb(51, 51, 51);
     --text-color: rgb(204, 204, 204);
-    --primary-color: rgb(235, 151, 62);
-    --primary-hover: rgb(172, 111, 45);
+    /*ORIGINAL*/
+    /*--primary-color: rgb(235, 151, 62);*/
+    /*--primary-hover: rgb(172, 111, 45);*/
+    --primary-color: rgb(255, 133, 58);
+    --primary-hover: rgb(222, 107, 72);
 }
 
-* {
-    transition: color .5s linear;
-    transition: background-color .5s linear;
-}
+/** {
+    transition: color .25s linear;
+    transition: background-color .25s linear;
+}*/
 
 body{
     background-color: var(--background-color);
@@ -30,10 +37,11 @@ nav {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    height: 2em;
     font-size: 1.2em;
 }
 
-#logo {
+/*#logo {
     margin: 0px;
 }
 #logo a{
@@ -44,6 +52,16 @@ nav {
 }
 #logo a:visited {
     color: var(--text-color);
+}*/
+
+#logo {
+    margin: 0;
+}
+
+#logo img {
+    display: block;
+    height: 100%;
+    margin-left: 2px;
 }
 
 .navlink {
@@ -55,7 +73,7 @@ nav {
     color: var(--primary-color);
 }
 
-#style-modes i {
+#style-modes {
     color: var(--text-color);
 }
 #style-modes i:hover {
@@ -63,9 +81,9 @@ nav {
 }
 
 .flex-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .poster {
@@ -80,8 +98,10 @@ nav {
     height: 100%;
     text-align: center;
     line-height: 525px;
-    color: white;
-    background-color: rgba(0, 0, 0, .6);
+    color: black;
+    /*color: white;*/
+    background-color: rgba(255, 255, 255, .5);
+    /*background-color: var(--primary-hover);*/
     visibility: hidden;
     opacity: 0%;
     transition: visibility .2s linear;
@@ -94,27 +114,56 @@ nav {
 .poster-details {
     display: none;
     position: fixed;
-    width: 84%;
+/*    width: 84%;
     height: 84%;
-    top: 8%;
-    left: 8%;
+    top: 10%;
+    left: 8%;*/
+
+/*    height: 84%;
+    top: 12%;
+    left: 5%;
+    right: 5%;*/
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
     margin: auto;
-    background-color: rgba(0, 0, 0, .75);
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    color: white;
+    /*background-color: rgba(0, 0, 0, .75);*/
+    /*background-color: rgba(91, 91, 91);*/
+    background-color: var(--background-color);
+    /*box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);*/
+    /*color: rgb(204, 204, 204);*/
+    color: var(--text-color);
 }
 .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0;
+    left: 0;
+   
+    /*display: block;*/
+    /*height: 30px;*/
+/*    margin-top: auto;
+    margin-bottom: auto;
+*/    
+    background-color: var(--primary-color);
+    padding: 15px;
+    color: white;
+    margin: 0;
+
 }
 .close:hover {
     cursor: pointer;
-    color: var(--primary-color)
+    background-color: var(--primary-hover);
 }
 .template {
-    height: 95%;
-    margin-left: 20px;
+    height: 90%;
+/*    position: absolute;
+    top: 45px;
+    left: 45px;*/
+    /*margin-top: 25px;*/
+    margin-left: 5%;
     background-color: rgb(135, 139, 187);
     align-self: center;
 }
