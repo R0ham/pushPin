@@ -12,9 +12,9 @@ $account = new Account();
 
 try {
     if ($account->login($username, $password)) {
-        http_redirect('/');
+        echo "{\"success\": \"true\", \"username\": $username}";
     } else {
-        echo "no";
+        echo "{\"success\": \"false\"}";
     }
 } catch (Exception $e) {
     error(500, $e);
