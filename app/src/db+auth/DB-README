@@ -1,0 +1,16 @@
+Use pushpin.sql to import DB and tables
+
+account Table columns:
+- account_id: the unique identifier of the account (this is the table’s primary key)  
+- account_name: the name used for logging in, or simply “username” (each name must be unique inside the table)  
+- account_passwd: the password hash, created with password_hash() 
+- account_reg_time: the registration timestamp (when the account has been created)  
+- account_enabled: whether the account is enabled or disabled, useful for disabling the account without deleting it from the database
+
+===============================================================
+
+account_sessions Table Columns:
+
+- session_id: the PHP Session ID of the authenticated client (this is also the primary key)
+- account_id: the ID of the account (pointing to the account_id column of the accounts table)
+- login_time: the timestamp of the session login (useful to handle session timeouts)
