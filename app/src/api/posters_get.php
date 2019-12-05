@@ -7,5 +7,5 @@ $res = $pdo->query('SELECT * FROM posters;');
 if ($res) {
     echo(json_encode($res->fetchAll()));
 } else {
-    error(500, '{"success": false, "message": "unable to execute query"}');
+    error(500, 'unable to execute query');
 }
