@@ -16,6 +16,15 @@ class Account{
 
     }
 
+    public function getUserName(): ?string {
+        if ($this->authenticated) return $this->name;
+        else return null;
+    }
+    public function getUserID(): ?int {
+        if ($this->authenticated) return $this->id;
+        else return null;
+    }
+
     //Add a new account to the system and return its ID (the account_id column of the accounts table)
  
     public function addAccount(string $name, string $passwd): int{
