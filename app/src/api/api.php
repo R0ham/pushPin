@@ -6,6 +6,7 @@ require_once "http_error.php";
 $method = ($_SERVER["REQUEST_METHOD"]);
 
 $uri = substr($_SERVER["REQUEST_URI"], 5);
+$uri = explode('?', $uri)[0];
 
 $allowed = $api[$uri];
 
@@ -18,5 +19,5 @@ if ($allowed) {
         error(405, "Method " . $method . " not allowed");
     }
 } else {
-    error(404, "REST endpoint not found");
+    error(404, "REST endpoint not found: $uri");
 }
