@@ -38,8 +38,22 @@ nav {
     font-size: 1.2em;
 }
 
+* {
+    font-family: 'Bariol Regular', sans-serif;
+}
+
 a {
     color: var(--text-color);
+}
+
+::-moz-selection {
+  color: white;
+  background: var(--primary-color);
+}
+
+::selection {
+  color: white;
+  background: var(--primary-color);
 }
 
 #logo {

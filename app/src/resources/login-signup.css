@@ -29,8 +29,22 @@ nav {
     font-size: 1.2em;
 }
 
+* {
+    font-family: 'Bariol Regular', sans-serif;
+}
+
 a {
     color: var(--text-color);
+}
+
+::-moz-selection {
+  color: white;
+  background: var(--primary-color);
+}
+
+::selection {
+  color: white;
+  background: var(--primary-color);
 }
 
 #logo {
@@ -99,7 +113,7 @@ label {
     border: none;
     background-color: var(--primary-color);
     color: white;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 100;
     font-family: 'Bariol Regular', sans-serif;
 }
