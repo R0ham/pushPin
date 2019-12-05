@@ -1,7 +1,8 @@
 <?php
 $api = [
     "posters" => [
-        "GET" => "posters_get.php"
+        "GET" => "posters_get.php",
+        "POST" => "addposter.php"
     ],
     "login" => [
         "POST" => "login_post.php"
