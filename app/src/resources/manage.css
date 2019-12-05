@@ -29,6 +29,10 @@ nav {
     font-size: 1.2em;
 }
 
+a {
+    color: var(--text-color);
+}
+
 #logo {
     margin: 0;
 }

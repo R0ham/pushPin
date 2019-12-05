@@ -11,7 +11,7 @@
     --primary-hover: rgb(222, 107, 72);
 }
 
-body{
+body {
     background-color: var(--background-color);
     margin: 0px;
     font-family: 'Bariol Regular', sans-serif;
@@ -27,6 +27,10 @@ nav {
     margin-bottom: 10px;
     height: 2em;
     font-size: 1.2em;
+}
+
+a {
+    color: var(--text-color);
 }
 
 #logo {
