@@ -12,7 +12,7 @@ $account = new Account();
 header("Content-Type: text/json");
 try {
     if ($account->login($username, $password)) {
-        echo "{\"success\": \"true\", \"username\": $username}";
+        echo "{\"success\": \"true\", \"username\": \"" . $username . "\"}";
     } else {
         echo "{\"success\": \"false\"}";
     }
