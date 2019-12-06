@@ -14,7 +14,7 @@ header("Content-Type: text/json");
 try {
     if ($account->sessionLogin()) {
         $username = $account->getUserName();
-        echo "{\"success\": \"true\", \"username\": $username}";
+        echo "{\"success\": \"true\", \"username\": \"" . $username . "\"}";
     } else {
         echo "{\"success\": \"false\"}";
     }
