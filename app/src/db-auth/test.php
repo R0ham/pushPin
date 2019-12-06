@@ -9,15 +9,6 @@ require './account_class.php';
 
 $account = new Account();
 
-/* Insert a new account */
-try{
-    $newId = $account->addAccount('test@rpi.edu', '1234567890');
-}
-catch (Exception $e){
-    echo $e->getMessage();
-    die();
-}
-
-echo 'The new account ID is '. $newId;
+$account->login('test@rpi.edu', '1234567890');
 
 ?>
