@@ -8,6 +8,8 @@ if ($_POST['password'] != $_POST['confirm']) {
     die();
 }
 
+session_start();
+
 $account = new Account();
 
 try {

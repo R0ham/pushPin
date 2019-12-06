@@ -8,6 +8,7 @@ $api = [
     ],
     "user" => [
         "GET" => "user_get.php",
-        "POST" => "createuser.php"
+        "POST" => "createuser.php",
+        "DELETE" => "logout.php"
     ]
 ];
