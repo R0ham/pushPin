@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once 'http_error.php';
 
 require_once'../db-auth/account_class.php';
