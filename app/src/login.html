@@ -8,6 +8,7 @@
         <script src="https://kit.fontawesome.com/83a8b959e4.js" crossorigin="anonymous"></script>
         <script src="resources/jquery-3.4.1.min.js"></script>
         <script src="resources/theme.js"></script>
+        <script src="frontend-controllers/login.js"></script>
     </head>
     <body>
         <header>
@@ -21,11 +22,13 @@
             </div>
         </header>
 
-        <form action="api/login.php" method="POST">
+        <form id="login-form">
             <label for="username">username<input id="username" type="text" name="username"/></label>
             <label for="password">password<input id="password" type="password" name="password"/> </label>
-            <input id="submit" type="submit" value="login"/>
+            <input id="submit" type="button" value="login"/>
         </form>
+
+        <p class="error">Invalid username or password</p>
 
         <p id="signup">
             Don't have an account? 

@@ -1,13 +1,28 @@
 <?php
-include('env.php');
-$con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_DB);
-if (mysqli_connect_errno()) {
-    http_response_code(500);
-    header("Content-Type: text/json");
-    echo(json_encode(array('error' => 'unable to connect to database')));
-    exit();
-}
+require_once 'http_error.php';
+require_once '../db-auth/db_inc.php';
 header("Content-Type: text/json");
-$result = mysqli_query($con, "SELECT * FROM posters");
-$rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-echo(json_encode($rows));
+
+if (isset($_GET['user'])) {
+    $query = 'SELECT posters.*, accounts.account_name FROM posters INNER JOIN accounts ON posters.account_id = accounts.account_id WHERE account_name = :acc_name;';
+    $pre = $pdo->prepare($query);
+    $res = $pre->execute(array(':acc_name' => $_GET['user']));
+    if ($res) {
+        $obj = $pre->fetchAll(PDO::FETCH_ASSOC);
+    }
+} else {
+    $res = $pdo->query('SELECT posters.*, accounts.account_name FROM posters INNER JOIN accounts ON posters.account_id = accounts.account_id;');
+    if ($res) {
+        $obj = $res->fetchAll(PDO::FETCH_ASSOC);
+        $res = true;
+    }
+    else {
+        $res = false;
+    }
+}
+
+if ($res) {
+    echo(json_encode($obj));
+} else {
+    error(500, 'unable to execute query');
+}

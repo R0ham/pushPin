@@ -8,6 +8,7 @@
         <script src="https://kit.fontawesome.com/83a8b959e4.js" crossorigin="anonymous"></script>
         <script src="resources/jquery-3.4.1.min.js"></script>
         <script src="resources/theme.js"></script>
+        <script src="frontend-controllers/signup.js"></script>
     </head>
     <body>
         <header>
@@ -21,12 +22,16 @@
             </div>
         </header>
 
-        <form action="api/signup.php" method="POST">
-            <label for="username">username<input id="username" type="text" name="username"/></label>
-            <label for="email">email<input id="email" type="text" name="username"/></label>
+        <form>
+            <label for="email">email<input id="email" type="text" name="email"/></label>
             <label for="password">password<input id="password" type="password" name="password"/></label>
-            <label for="confirm-password">confirm password<input id="confirm-password" type="password" name="password"/></label>
-            <input id="submit" type="submit" value="signup"/>
+            <label for="confirm-password">confirm password<input id="confirm-password" type="password" name="confirm"/></label>
+            <input id="submit" type="button" value="signup"/>
         </form>
+
+        <p class="error" id="match-error">Passwords do not match</p>
+        <p class="error" id="length-error">Password must be at least 8 characters</p>
+        <p class="error" id="email-error">Must use an RPI email</p>
+        <p class="error" id="exists-error">An account with this email already exists</p>
     </body>
 </html>
