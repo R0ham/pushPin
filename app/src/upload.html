@@ -31,15 +31,19 @@
             </div>
 
             <form action="api/upload.php" method="POST">
-                <button id="image-upload">upload image</button>
-                <input id="posterName" type="text" name="posterName" placeholder="poster title"/>
-                <textarea id="description" name="description" placeholder="event description..."></textarea>  
+                <button id="image-upload">select an image</button>
+                <h2>poster title</h2>
+                <input id="posterName" type="text" name="posterName"/>
+                <h2>poster tags</h2>
+                <input id="posterTags" type="text" name="posterTags"/>
+                <h2>event description</h2>
+                <textarea id="description" name="description"></textarea>  
                 <label for="event-date">
-                    event date
+                    <h2>event date</h2>
                     <input id="event-date" type="date" name="event-date"/>
                 </label>
                 <label for="takedown-date">
-                        takedown date
+                        <h2>takedown date</h2>
                         <input id="takedown-date" type="date" name="takedown-date"/>
                     </label>
                 <input id="submit" type="submit" value="upload"/>
