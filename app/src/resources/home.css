@@ -1,6 +1,6 @@
 :root {
     --background-color:rgb(240, 240, 240);
-    --background-hover:rgba(240, 240, 240, 0.85);
+    --background-hover:rgba(240, 240, 240, 0.9);
     --text-color: black;
     /*ORIGINAL*/
     /*--primary-color: rgb(220, 56, 50);*/
@@ -11,7 +11,7 @@
 }
 [data-theme="dark"] {
     --background-color: rgb(51, 51, 51);
-    --background-hover: rgba(51, 51, 51, 0.85);
+    --background-hover: rgba(51, 51, 51, 0.9);
     --text-color: rgb(204, 204, 204);
     /*ORIGINAL*/
     /*--primary-color: rgb(235, 151, 62);*/
