@@ -68,6 +68,7 @@ CREATE TABLE IF NOT EXISTS `pushpin`.`account_sessions` (
 CREATE TABLE IF NOT EXISTS `pushpin`.`posters` (
   `poster_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `title` VARCHAR(150) NOT NULL,
+  `image_file` varchar(32) not null,
   `description` TEXT NULL,
   `event_date` DATE NOT NULL,
   `takedown_date` DATE NOT NULL,

@@ -150,3 +150,10 @@ label {
 #submit, #active {
     transition: none;
 }
+
+.error {
+    display: none;
+    color: red;
+    text-align: center;
+    margin-bottom: 35px;
+}

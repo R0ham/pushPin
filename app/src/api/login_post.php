@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once 'http_error.php';
 
 require_once'../db-auth/account_class.php';
@@ -12,7 +14,7 @@ $account = new Account();
 header("Content-Type: text/json");
 try {
     if ($account->login($username, $password)) {
-        echo "{\"success\": \"true\", \"username\": $username}";
+        echo "{\"success\": \"true\", \"username\": \"" . $username . "\"}";
     } else {
         echo "{\"success\": \"false\"}";
     }
