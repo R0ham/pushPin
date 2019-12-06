@@ -11,7 +11,6 @@ function login() {
 }
 
 function handleResponse(data, status) {
-    console.log(data);
     if(status === 'success' && data.success === 'true') {
         window.location.replace('index.html');
     }

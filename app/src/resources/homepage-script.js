@@ -1,17 +1,11 @@
-$(document).ready(function() {
-    $('.poster').hover(showOverlay, hideOverlay);
-    $('.overlay').click(showDetails);
-    $('.close').click(hideDetails);
-});
-
 function showOverlay(e) {
-    const overlay = $(e.target).find('.overlay');
+    const overlay = $(e.target.parentElement).find('.overlay');
     overlay.css('opacity', '100%');
     overlay.css('visibility', 'visible');
 }
 
 function hideOverlay(e) {
-    const overlay = $(e.target);
+    const overlay = $(e.target.parentElement).find('.overlay');
     if(!overlay.hasClass('overlay'))
         return;
     overlay.css('opacity', '0%');
@@ -27,12 +21,4 @@ function showDetails(e) {
 
 function hideDetails() {
     $('.poster-details').hide();
-}
-
-// this won't be needed when we use actual images
-function setTemplateWidth(template) {
-    const height = template.height();
-    const width = parseInt((8.5/11) * height);
-    template.width(width);
-    template.css('min-width', width + 'px');
 }
