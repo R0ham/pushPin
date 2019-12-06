@@ -7,6 +7,8 @@ require_once 'http_error.php';
 require_once'../db-auth/account_class.php';
 require_once '../db-auth/db_inc.php';
 
+session_start();
+
 $account = new Account();
 header("Content-Type: text/json");
 try {
