@@ -1,17 +1,18 @@
 :root {
     --background-color:rgb(240, 240, 240);
-    --background-hover:rgba(240, 240, 240, 0.9);
+    --background-hover:rgba(240, 240, 240, 0.95);
+    --tint: rgba(240, 240, 240, 0.6);
     --text-color: black;
     /*ORIGINAL*/
     /*--primary-color: rgb(220, 56, 50);*/
     /*--primary-hover: rgb(173, 46, 42);*/
     --primary-color: rgb(230, 57, 70);
     --primary-hover: rgb(200, 38, 57);
-
 }
 [data-theme="dark"] {
     --background-color: rgb(51, 51, 51);
-    --background-hover: rgba(51, 51, 51, 0.9);
+    --background-hover: rgba(51, 51, 51, 0.95);
+    --tint: rgba(51, 51, 51, 0.6);
     --text-color: rgb(204, 204, 204);
     /*ORIGINAL*/
     /*--primary-color: rgb(235, 151, 62);*/
@@ -117,7 +118,7 @@ a {
     text-align: center;
     line-height: 525px;
     color: var(--text-color);
-    background-color: var(--background-hover);
+    background-color: var(--tint);
     visibility: hidden;
     opacity: 0%;
     transition: visibility .2s linear;

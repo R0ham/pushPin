@@ -19,7 +19,7 @@ function loadPosters() {
 function generatePoster(poster) {
     const post = $(`<div class="poster">
                         <img class="poster-image" src="resources/posters/${poster.image_file}"/>
-                        <div class="overlay">click for more details</div>
+                        <div class="overlay"></div>
                         <div class="poster-details">
                             <i class="close fas fa-times"></i>
                             <img class="poster-full" src="resources/posters/${poster.image_file}"/>
