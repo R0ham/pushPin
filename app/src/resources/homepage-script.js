@@ -16,7 +16,6 @@ function showDetails(e) {
     const poster = $(e.target).parent();
     poster.find('.overlay').css({'opacity': '0%', 'visibility': 'hidden'});
     poster.find('.poster-details').css('display', 'flex ');
-    setTemplateWidth(poster.find('.template')); // purely for the demo
 
     // resource: https://codepen.io/geoffgraham/pen/LogERe
     const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
