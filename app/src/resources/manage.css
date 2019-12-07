@@ -101,10 +101,9 @@ a {
     margin: auto;
     color: var(--text-color);
 }
-.test-image {
+.image {
     width: 100%;
     height: 525px;
-    background-color: rgb(135, 139, 187);
 }
 .poster-description {
     width: 100%;
