@@ -12,9 +12,12 @@ $.get('/api/user_get.php', (data) => {
                                 </nav>`);
             initializeTheme();
         }
+        if($('title').text() === 'Login' || $('title').text() === 'Signup') {
+            window.location.replace('index.html');
+        }
     }
     else {
-        if($('title').text() !== 'Home') {
+        if($('title').text() === 'Manage' || $('title').text() === 'Upload') {
             window.location.replace('index.html');
         }
     }

@@ -28,7 +28,7 @@ function signup() {
 
 function handleResponse(data, status) {
     if(status === 'success' && data.success) {
-        window.location.replace('index.html');
+        window.location.replace('login.html');
     }
     else {
         console.log('error');
