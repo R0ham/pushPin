@@ -100,7 +100,7 @@ a {
     margin: 10px;
 }
 
-input, textarea {
+input, textarea, #image-uplaod {
     font-size: 1.1em;
     border: 3px solid rgb(204, 204, 204);
     margin-bottom: 30px;
@@ -108,12 +108,15 @@ input, textarea {
     background-color: var(--background-color);
     color: var(--text-color);
 }
-input:focus, textarea:focus {
+input:focus, textarea:focus, #image-uplaod:focus {
     outline: none;
     border: 3px solid var(--primary-color);
 }
-input {
+input, #image-uplaod {
     display: block;
+}
+input[type="file"] {
+    display: none;
 }
 textarea {
     min-width: 440px;
@@ -132,8 +135,10 @@ h2 {
 }
 
 #image-upload{
+    text-align: center;
     font-size: 1.2em;
     height: 35px;
+    line-height: 35px;
     max-width: 150px;
     min-width: 125px;
     color: var(--primary-color);
@@ -154,6 +159,7 @@ h2 {
     max-width: 150px;
     min-width: 100px;
     height: 40px;
+    text-align: center;
     border: none;
     background-color: var(--primary-color);
     color: white;
