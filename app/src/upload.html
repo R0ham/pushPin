@@ -9,6 +9,7 @@
         <script src="resources/jquery-3.4.1.min.js"></script>
         <script src="resources/theme.js"></script>
         <script src="frontend-controllers/session.js"></script>
+        <script src="frontend-controllers/upload.js"></script>
         <script src="frontend-controllers/logout.js"></script>
     </head>
     <body>
@@ -29,11 +30,13 @@
 
         <div id="uploadInfo">
             <div class="poster-container">
-                <img id="posterImg">
+                <img id="posterImg"/>
             </div>
 
             <form action="api/upload.php" method="POST">
-                <button id="image-upload">select an image</button>
+                <label id="image-upload">
+                    <input type="file" accept="image/*">select an image</input>
+                </label>
                 <h2>poster title</h2>
                 <input id="posterName" type="text" name="posterName"/>
                 <h2>event description</h2>
