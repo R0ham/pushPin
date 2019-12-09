@@ -1,7 +1,7 @@
 let container;
 $(document).ready(function() {
     container = $('#posters');
-    const posters = loadPosters();
+    loadPosters();
 });
 
 function loadPosters() {

@@ -1,3 +1,4 @@
+redirectIfLoggedIn();
 $(document).ready(function(){
     $('#submit').click(login);
 });
