@@ -11,7 +11,7 @@ if (isset($_GET['user'])) {
         $obj = $pre->fetchAll(PDO::FETCH_ASSOC);
     }
 } else {
-    $res = $pdo->query('SELECT posters.*, accounts.account_name FROM posters INNER JOIN accounts ON posters.account_id = accounts.account_id;');
+    $res = $pdo->query('SELECT posters.*, accounts.account_name FROM posters INNER JOIN accounts ON posters.account_id = accounts.account_id WHERE posters.takedown_date >= CURDATE() ORDER BY posters.event_date;');
     if ($res) {
         $obj = $res->fetchAll(PDO::FETCH_ASSOC);
         $res = true;
