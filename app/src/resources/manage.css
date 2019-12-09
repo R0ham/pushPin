@@ -136,3 +136,15 @@ a {
 button:focus {
     outline: none;
 }
+
+
+.edit-title, label, textarea {
+    width: 100%;
+    margin-top: 10px;
+}
+input {
+    height: 20px;
+}
+input, textarea {
+    font-size: .9em;
+}
