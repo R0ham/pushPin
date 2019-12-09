@@ -1,4 +1,4 @@
-$.get('/api/user_get.php', (data) => {
+$.get('/api/user', (data) => {
     if(data.success === 'true') {
         $('nav').remove();
         $('header').prepend(`<nav>

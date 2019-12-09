@@ -23,7 +23,7 @@ function signup() {
         return;
     }
 
-    $.post('api/createuser.php', credentials, handleResponse).fail(() => { $('#exists-error').show(); });
+    $.post('/api/user', credentials, handleResponse).fail(() => { $('#exists-error').show(); });
 }
 
 function handleResponse(data, status) {

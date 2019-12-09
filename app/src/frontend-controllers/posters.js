@@ -5,7 +5,7 @@ $(document).ready(function() {
 });
 
 function loadPosters() {
-    $.get('/api/posters_get.php', (posters) => {
+    $.get('/api/posters', (posters) => {
         for(let i = 0; i < posters.length; i++)
             generatePoster(posters[i]);
 
