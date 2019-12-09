@@ -22,15 +22,34 @@ function loadPosters(username) {
 
 function generatePoster(poster) {
     const post = $(`<div class="poster-container">
-                        <div class="poster">
+                        <div class="poster" id="poster-${poster.poster_id}">
                             <img src="resources/posters/${poster.image_file}" class='image'></img>
-                            <h2 class="poster-title">${poster.title}</h2>
-                            <h2 class="poster-date">${poster.event_date}</h2>
-                            <p class="poster-description">${poster.description}</p>
-                            <button class="edit-poster">edit</button>
-                            <button class="delete-poster">delete</button>
+                            <h2 class="info poster-title">${poster.title}</h2>
+                            <h2 class="info poster-date">${poster.event_date}</h2>
+                            <h3 class="info poster-takedown">Takedown: ${poster.takedown_date}</h3>
+                            <p class="info poster-description">${poster.description}</p>
+                            <button class="edit-poster" onclick="editPoster(this)">edit</button>
+                            <button class="delete-poster" onclick="deletePoster(this)">delete</button>
                         </div>
                     </div>`);
     
     container.append(post);
+}
+
+function editPoster(e) {
+
+}
+
+function deletePoster(e) {
+    if(confirm('Are you sure you want to delete this poster')) {
+        const id = e.parentElement.id.substring(7);
+        $.ajax({
+            url: '/api/delete_poster.php',
+            type: 'DELETE',
+            data: {'id': id},
+            success: function() {
+                $(e.parentElement.parentElement).remove();
+            }
+        });
+    }  
 }
