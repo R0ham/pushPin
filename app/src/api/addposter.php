@@ -4,8 +4,9 @@ require_once 'http_error.php';
 require_once '../db-auth/db_inc.php';
 require_once '../db-auth/account_class.php';
 
+session_start();
+$targetDir = realpath("../uploaded_posters/") . '/';
 
-$targetDir = "uploaded_posters/";
 $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 function generate_string($input, $strength = 16) {
@@ -22,8 +23,6 @@ function generate_string($input, $strength = 16) {
 
 function doUpload($fname)
 {
-    $targetDir = "uploaded_posters/";
-    $targetFile = $targetDir . $fname;
     $check = getimagesize($_FILES["poster"]["tmp_name"]);
     if ($check === false) {
         return 1;
@@ -31,7 +30,11 @@ function doUpload($fname)
     if ($_FILES["poster"]["size"] > 10000000) {
         return 2;
     }
-    move_uploaded_file($_FILES["poster"]["tmp_name"], $targetFile);
+    if (!move_uploaded_file($_FILES["poster"]["tmp_name"], $fname)) {
+
+        error(500, "Couldn't move file from " . $_FILES["poster"]['tmp_name'] . " to $fname");
+        return 3;
+    }
     return $fname;
 
 }
@@ -46,15 +49,16 @@ try {
         die();
     }
 } catch (Exception $e) {
-    error(500, $e);
+    error(500, $e->getMessage());
     die();
 }
 
 $unique = false;
 while (!$unique) {
-    $fname_base = generate_string($permitted_chars, 32);
+    $fname_base = generate_string($permitted_chars, 16);
     $imageFileType = strtolower(pathinfo($_FILES["poster"]["name"],PATHINFO_EXTENSION));
-    $fname = $targetDir . $fname_base . '.' . $imageFileType;
+    $fname_ext = $fname_base . '.' . $imageFileType;
+    $fname = $targetDir . $fname_ext;
     $unique = !file_exists($fname);
 }
 
@@ -64,13 +68,24 @@ if ($res === 1) {
     error(400, 'Upload was not an image');
 } else if ($res === 2) {
     error(400, 'Upload was too large');
+} else if ($res === 3) {
+    error(500, 'Unable to move upload');
 } else {
-    $query = 'INSERT INTO posters (account_id, title, image_file, takedown, event_date) VALUES (:accountID, :title, :imageFile, :takedown, :eventDate);';
+    $query = 'INSERT INTO posters (account_id, title, image_file, takedown_date, event_date, description) VALUES (:accountID, :title, :imageFile, :takedown, :eventDate, :des);';
     $vals = array(':accountID' => $account->getUserID(), ':title' => $_POST['posterName'],
-        ':imageFile' => $fname_base, ':takedown' => $_POST['takedown-date'], ':eventDate' => $_POST['event-date']);
+        ':imageFile' => $fname_ext, ':takedown' => $_POST['takedown-date'], ':eventDate' => $_POST['event-date'],
+        ':des' => $_POST['description']);
 
     $pre = $pdo->prepare($query);
-    $pre->execute($vals);
+
+    try {
+        if (!$pre->execute($vals)) {
+            error(500, $pre->errorInfo());
+        }
+    } catch (Exception $e) {
+        error(500, $e->getMessage());
+    }
+
     header("Content-Type: text/json");
     echo '{"success": "true"}';
 }
