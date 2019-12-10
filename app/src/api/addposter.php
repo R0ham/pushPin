@@ -5,7 +5,7 @@ require_once '../db-auth/db_inc.php';
 require_once '../db-auth/account_class.php';
 
 session_start();
-$targetDir = realpath("../uploaded_posters/") . '/';
+$targetDir = realpath("../resources/posters") . '/';
 
 $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -31,7 +31,6 @@ function doUpload($fname)
         return 2;
     }
     if (!move_uploaded_file($_FILES["poster"]["tmp_name"], $fname)) {
-
         error(500, "Couldn't move file from " . $_FILES["poster"]['tmp_name'] . " to $fname");
         return 3;
     }
@@ -86,6 +85,5 @@ if ($res === 1) {
         error(500, $e->getMessage());
     }
 
-    header("Content-Type: text/json");
-    echo '{"success": "true"}';
+    header('Location: ../index.html');
 }

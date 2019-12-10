@@ -143,6 +143,11 @@ a {
     color: var(--text-color);
     z-index: 2;
 }
+.poster-details div {
+    flex-grow: 1;
+    height: 90%;
+    align-self: center;
+}
 .close {
     position: absolute;
     top: 0;
@@ -159,13 +164,12 @@ a {
 .poster-full {
     display: block;
     height: 90%;
-    width: auto;
+    width: calc(90vh * .7733);
     margin-left: 5%;
     align-self: center;
 }
 .poster-title {
     padding-left: 10%;
-    padding-top: 10%;
     margin: 0px;
 }
 .poster-date {

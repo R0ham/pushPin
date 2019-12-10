@@ -48,8 +48,8 @@ function editMode(e) {
 function viewMode(p) {
     const poster = $(p);
     poster.find('.edit-title').replaceWith(`<h2 class="info poster-title">${poster.find('.edit-title').val()}</h2>`);
-    poster.find('.edit-date').replaceWith(`<h2 class="info poster-date">${poster.find('.edit-date').val()}</h2>`);
-    poster.find('.edit-takedown').replaceWith(`<h3 class="info poster-takedown">Takedown: ${poster.find('.edit-takedown').val()}</h3>`);
+    poster.find('.edit-date').parent().replaceWith(`<h2 class="info poster-date">${poster.find('.edit-date').val()}</h2>`);
+    poster.find('.edit-takedown').parent().replaceWith(`<h3 class="info poster-takedown">Takedown: ${poster.find('.edit-takedown').val()}</h3>`);
     poster.find('.edit-description').replaceWith(`<p class="info poster-description">${ poster.find('.edit-description').val()}</p>`);
     poster.find('.save-poster').replaceWith(`<button class="edit-poster" onclick="editMode(this)">edit</button>`);
 }
@@ -65,10 +65,10 @@ function savePoster(p) {
     posterData.takedown = poster.find('.edit-takedown').val();
 
     $.ajax({
-        url: '/api/edit_poster.php',
+        url: '/api/edit_poster.php?' + $.param(posterData),
         type: 'PUT',
-        data: posterData,
-        success: () => { viewMode(poster); }
+        success: () => { viewMode(poster); },
+        error: function(a, b, c) {console.log(a, b, c)}
     });
 }
 
@@ -76,9 +76,8 @@ function deletePoster(e) {
     if(confirm('Are you sure you want to delete this poster')) {
         const id = e.parentElement.id.substring(7);
         $.ajax({
-            url: '/api/delete_poster.php',
+            url: '/api/delete_poster.php?pid=' + id,
             type: 'DELETE',
-            data: {'pid': id},
             success: function() {
                 $(e.parentElement.parentElement).remove();
             }
