@@ -85,6 +85,28 @@ INSERT INTO `pushpin`.`posters` (`poster_id`, `title`, `description`, `event_dat
 (NULL, 'test2', NULL, '2019-12-24', '2019-12-17', 2),
 (NULL, 'test3', NULL, '2019-12-26', '2019-12-20', 2);
 
+INSERT INTO pushpin.posters (title, image_file, description, event_date, takedown_date, account_id) VALUES
+('test poster', 'poster 1.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 2),
+('test poster', 'poster 2.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 2),
+('test poster', 'poster 3.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 2),
+('test poster', 'poster 4.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 3),
+('test poster', 'poster 5.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 3),
+('test poster', 'poster 6.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 3),
+('test poster', 'poster 7.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 4),
+('test poster', 'poster 8.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 4),
+('test poster', 'poster 9.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 4),
+('test poster', 'poster 10.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 5),
+('test poster', 'poster 11.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 5),
+('test poster', 'poster 12.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 5),
+('test poster', 'poster 13.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 6),
+('test poster', 'poster 14.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 6),
+('test poster', 'poster 15.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 6),
+('test poster', 'poster 16.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 7),
+('test poster', 'poster 17.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 7),
+('test poster', 'poster 18.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 7),
+('test poster', 'poster 19.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 8),
+('test poster', 'poster 20.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 8);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
