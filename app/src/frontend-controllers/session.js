@@ -1,6 +1,6 @@
 function checkLogin() {
     return new Promise(function(resolve, reject) {
-        $.get('/api/user_get.php', (data) => {
+        $.get('../api/user_get.php', (data) => {
             if(data.success === 'true') {
                 resolve(data.username);
             }

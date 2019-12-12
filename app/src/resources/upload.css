@@ -100,7 +100,7 @@ a {
     margin: 10px;
 }
 
-input, textarea, #image-uplaod {
+input, textarea, #image-upload {
     font-size: 1.1em;
     border: 3px solid rgb(204, 204, 204);
     margin-bottom: 30px;
@@ -108,11 +108,11 @@ input, textarea, #image-uplaod {
     background-color: var(--background-color);
     color: var(--text-color);
 }
-input:focus, textarea:focus, #image-uplaod:focus {
+input:focus, textarea:focus, #image-upload:focus {
     outline: none;
     border: 3px solid var(--primary-color);
 }
-input, #image-uplaod {
+input, #image-upload {
     display: block;
 }
 input[type="file"] {

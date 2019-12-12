@@ -8,7 +8,7 @@ function login() {
     credentials.username = $('#username').val();
     credentials.password = $('#password').val();
     
-    $.post('api/login_post.php', credentials, handleResponse);
+    $.post('../api/login_post.php', credentials, handleResponse);
 }
 
 function handleResponse(data, status) {
