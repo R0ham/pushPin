@@ -17,6 +17,10 @@ function loadPosters(username) {
     $.get('../api/posters_get.php', {'user': username}, (posters) => {
         for(let i = 0; i < posters.length; i++)
             generatePoster(posters[i]);
+
+        if (posters.length == 0) {
+            alert('You don\'t have any posters up! You can add them on the upload page.');
+        }
     });
 }
 
