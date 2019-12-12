@@ -111,26 +111,26 @@ CREATE TABLE `posters` (
 --
 
 INSERT INTO `posters` (`poster_id`, `title`, `image_file`, `description`, `event_date`, `takedown_date`, `account_id`) VALUES
-(53, 'test poster', 'poster 1.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 2),
-(54, 'test poster', 'poster 2.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 2),
-(55, 'test poster', 'poster 3.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 2),
-(56, 'test poster', 'poster 4.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 3),
-(57, 'test poster', 'poster 5.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 3),
-(58, 'test poster', 'poster 6.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 3),
-(59, 'test poster', 'poster 7.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 4),
-(60, 'test poster', 'poster 8.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 4),
-(61, 'test poster', 'poster 9.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 4),
-(62, 'test poster', 'poster 10.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 5),
-(63, 'test poster', 'poster 11.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 5),
-(64, 'test poster', 'poster 12.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 5),
-(65, 'test poster', 'poster 13.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 6),
-(66, 'test poster', 'poster 14.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 6),
-(67, 'test poster', 'poster 15.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 6),
-(68, 'test poster', 'poster 16.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 7),
-(69, 'test poster', 'poster 17.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 7),
-(70, 'test poster', 'poster 18.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 7),
-(71, 'test poster', 'poster 19.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 8),
-(72, 'test poster', 'poster 20.jpg', 'This is a really cool event you should come check it out!', '2019-12-12', '2019-12-25', 8);
+(53, 'Arts Series', 'poster 1.jpg', 'Come visit us at the Troy Music Hall', '2019-12-12', '2019-12-25', 2),
+(54, 'Dumpling Party!', 'poster 2.jpg', 'Come make and eat a ton of Chinese pork and tofu dumplings!', '2019-12-12', '2019-12-25', 2),
+(55, 'Student Relief Fund', 'poster 3.jpg', 'Support the 2020 class gift by aiding RPI students in times of personal crisis', '2019-12-12', '2019-12-25', 2),
+(56, 'Fall Events', 'poster 4.jpg', 'The Clubhouse Pub opens for the Fall Semester', '2019-12-12', '2019-12-25', 3),
+(57, 'Thanksgiving Dinner', 'poster 5.jpg', 'Pre-registration required.', '2019-12-12', '2019-12-25', 3),
+(58, 'Real World: Technical Interviewing', 'poster 6.jpg', 'Hear from recruiters from Zones, Datto, James McGuinness & Associates, and more! Lunch provided!', '2019-12-12', '2019-12-25', 3),
+(59, 'Join Mediterranean Student Club', 'poster 7.jpg', 'Come share your favorite recipes and foods!', '2019-12-12', '2019-12-25', 4),
+(60, 'Drop-In Meditation', 'poster 8.jpg', 'Free distressing event at the Mueller Center.', '2019-12-12', '2019-12-25', 4),
+(61, 'Writing Contest', 'poster 9.jpg', 'Submit now through March 17, 4 P.M. cash prizes for each category.', '2019-12-12', '2019-12-25', 4),
+(62, 'Artist Survey', 'poster 10.jpg', 'Help decide who plays in the Spring!', '2019-12-12', '2019-12-25', 5),
+(63, 'Falling in Reverse', 'poster 11.jpg', 'Discounted tickets sold in the Union.', '2019-12-12', '2019-12-25', 5),
+(64, 'Sheer Idiocy', 'poster 12.jpg', 'Free improv show with a very special guest: the Pub.', '2019-12-12', '2019-12-25', 5),
+(65, 'Ethics', 'poster 13.jpg', 'Rensselaer for Ethics in Science, Engineering, and Technology', '2019-12-12', '2019-12-25', 6),
+(66, 'Drop or Swap', 'poster 14.jpg', 'Today in the 87 Gym!', '2019-12-12', '2019-12-25', 6),
+(67, 'Healthy Cooking', 'poster 15.jpg', 'Come join APO as we prepare healthy foods that are great dietary options for diabetics!', '2019-12-12', '2019-12-25', 6),
+(68, 'RPI Art Club', 'poster 16.jpg', 'Hang out with us this weekend and draw!', '2019-12-12', '2019-12-25', 7),
+(69, 'Reunion & Homecoming', 'poster 17.jpg', 'Join our alumni/ae for a full weekend of events!', '2019-12-12', '2019-12-25', 7),
+(70, 'Union After Dark', 'poster 18.jpg', 'Minecraft Battle Royale', '2019-12-12', '2019-12-25', 7),
+(71, 'RPI Podcast', 'poster 19.jpg', 'Why not change the world? Season 1 now available!', '2019-12-12', '2019-12-25', 8),
+(72, 'Lyric Awards', 'poster 20.jpg', 'Location: Chapel & Cultural Center', '2019-12-12', '2019-12-25', 8);
 
 --
 -- Indexes for dumped tables
